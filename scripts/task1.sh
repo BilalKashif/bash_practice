@@ -10,7 +10,6 @@
 
 #folder and so on.. (Basically in depth first search manner)
 
-
 function checkFolder() {
 
     #filename is $1
@@ -21,7 +20,6 @@ function checkFolder() {
     #Loop through all of the itmes in current directory
     for item in "$CURRENT_FOLDER"/*; do
 
-
         #If the current item is a folder
         if [ -d "$item" ]; then
 
@@ -30,7 +28,7 @@ function checkFolder() {
 
         fi
 
-        #If the item is a file then 
+        #If the item is a file then
         if [ -f "$item" ]; then
 
             if [ "$item" == "$CURRENT_FOLDER/$FILE_NAME" ]; then
