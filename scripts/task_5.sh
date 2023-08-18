@@ -19,12 +19,14 @@ function printBox() {
         echo -n "*"
 
     done
+
+    echo -e
 }
 
 # If number of arguments are not less then 1
 if [ ! $# -lt 1 ]; then
 
-    printBox $1
+    printBox $@
 
 else
 
