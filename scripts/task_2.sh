@@ -14,12 +14,17 @@ for i in {1..3}; do
     touch "file$i.txt"
 done
 
+# Back to the first directory
+cd ..
+
 # Creating second folder
 
 mkdir task2_temp
 
 SECOND_FOLDER_PATH="$(pwd)/task2_temp"
 
+# Cd to te first folder
+cd $FIRST_FOLDER_PATH
 # Copying the files from one folder to other
 
 for i in {1..3}; do
@@ -27,15 +32,17 @@ for i in {1..3}; do
     cp "file$i.txt" $SECOND_FOLDER_PATH
 done
 
-
+# Back in the previous directory
+cd ..
 
 # Replacing names of folder
 
-mv task2_temp task_2
+echo "Swaping folder names" 
 
-# cd to previous directory
-
-cd ..
+mv task2_temp task
 
 mv task_2 task2_temp
+
+mv task task_2
+
 
